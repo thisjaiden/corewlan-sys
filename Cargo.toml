@@ -1,6 +1,6 @@
 [package]
 name = "corewlan-sys"
-version = "0.1.0"
+version = "0.1.1"
 description = "FFI Bindings to MacOS's CoreWLAN framework."
 keywords = ["ffi", "macos", "framework", "wlan"]
 categories = ["external-ffi-bindings", "os", "os::macos-apis"]
@@ -8,6 +8,10 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/thisjaiden/corewlan-sys/"
 edition = "2021"
 links = "CoreWLAN"
+
+[package.metadata.docs.rs]
+default-target = "x86_64-apple-darwin"
+targets = ["x86_64-apple-darwin", "aarch64-apple-darwin"]
 
 [dependencies]
 objc = "0.2.7"
